@@ -36,6 +36,11 @@ impl HashedPassword {
         hex::encode(result)
     }
 
+    /// convert a string-like `HashedPassword` to Self
+    pub fn new<T: ToString>(hashed_password: T) -> Self {
+        Self(hashed_password.to_string())
+    }
+
     /// convert `plain` to [HashedPassword], with `secret`
     pub fn from_plain<T: AsRef<str>, S: AsRef<[u8]>>(plain: T, secret: S) -> Self {
         let salt = Self::salt();
