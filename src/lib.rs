@@ -5,6 +5,7 @@ use rand::distributions::Alphanumeric;
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 
+/// [HashedPassword] store hashed password string.
 #[derive(Debug, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[cfg_attr(feature = "sqlx_0_7_4", derive(sqlx_0_7_4::FromRow))]
@@ -68,6 +69,7 @@ impl HashedPassword {
         result.0 == self.as_str()
     }
 
+    /// convert self into string
     pub fn as_str(&self) -> &str {
         &self.0
     }
