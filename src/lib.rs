@@ -8,7 +8,7 @@ use sha2::{Digest, Sha256};
 /// [HashedPassword] store hashed password string.
 #[derive(Debug, Eq, PartialEq, Hash, Clone)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[cfg_attr(feature = "sqlx_0_7_4", derive(sqlx_0_7_4::FromRow))]
+#[cfg_attr(feature = "sqlx", derive(sqlx::FromRow))]
 pub struct HashedPassword(String);
 
 impl HashedPassword {

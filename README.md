@@ -21,4 +21,4 @@ hashed.validate("WrongPlainPassword", b"my-secret"); // false
 
 ## features
 - `serde`: enable `serde`
-- `sqlx_0_7_4`: enable `sqlx:0.7.4` and derive `sqlx::FromRow`
+- `sqlx`: enable `sqlx` and derive `sqlx::FromRow`
