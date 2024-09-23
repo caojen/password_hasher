@@ -1,0 +1,13 @@
+[package]
+name = "hashed_password"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
+rand = { version = "0.8" }
+sha2 = { version = "0.10" }
+hex = { version = "0.4" }
+sqlx_0_7_4 = { package = "sqlx", version = "0.7.4", optional = true }
