@@ -8,7 +8,7 @@ First, create a `HashedPassword`:
 ```rust
 use hashed_password::HashedPassword;
 
-let hashed = HashedPassword::new("MyPlainPassword", b"my-secret");
+let hashed = HashedPassword::from_plain("MyPlainPassword", b"my-secret");
 println!("hashed data: {}", hashed.as_str());
 ```
 
